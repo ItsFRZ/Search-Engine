@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2020 at 01:59 PM
+-- Generation Time: Sep 10, 2020 at 01:30 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -25,31 +25,58 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `search`
+-- Table structure for table `searchengine`
 --
 
-CREATE TABLE `search` (
-  `Name` varchar(100) NOT NULL,
-  `Descr` mediumtext DEFAULT NULL,
+CREATE TABLE `searchengine` (
+  `Id` int(100) NOT NULL,
+  `Name` varchar(1000) NOT NULL,
+  `Url` varchar(1000) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `search`
+-- Dumping data for table `searchengine`
 --
 
-INSERT INTO `search` (`Name`, `Descr`, `Date`) VALUES
-('Mercedes-Benz', 'Mercedes-Benz is both a German automotive marque and, from late 2019 onwards, a subsidiary of Daimler AG. Mercedes-Benz is known for producing luxury vehicles and commercial vehicles. The headquarters is in Stuttgart, Baden-Württemberg. The name first appeared in 1926 under Daimler-Benz', '2020-09-09 06:59:52'),
-('BMW', 'Bayerische Motoren Werke AG, commonly referred to as BMW, is a German multinational company which produces luxury vehicles and motorcycles. The company was founded in 1916 as a manufacturer of aircraft engines, which it produced from 1917 until 1918 and again from 1933 to 1945', '2020-09-09 07:52:15'),
-('Tesla', 'Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California. Teslas current products include electric cars, battery energy storage from home to grid scale, solar products and related products and services', '2020-09-09 07:54:35'),
-('BMW - Wikipedia', 'Bayerische Motoren Werke AG, commonly referred to as BMW is a German multinational company which produces luxury vehicles and motorcycles.\r\nProduction output‎: ‎2,564,025 vehicles (2019)\r\nBrands‎: ‎Automobiles; ‎BMW‎; ‎Mini‎; ‎Rolls-Royce‎; ...\r\nProducts‎: ‎Cars‎; ‎motorcycles\r\nFounded‎: ‎7 March 1916; 104 years ago', '2020-09-09 11:21:34'),
-('BMW 3 Series', 'The BMW 3 Series is a compact executive car manufactured by the German automaker BMW since May 1975. It is the successor to the 02 Series and has been produced in seven different generations.\r\n\r\nThe first generation of the 3 Series was only available as a 2-door sedan (saloon), however the model range has since expanded to include a 4-door sedan, 2-door convertible, 2-door coupé, 5-door station wagon, 5-door liftback (\"Gran Turismo\") and 3-door hatchback body styles. Since 2013, the coupé and convertible models have been marketed as the 4 Series, therefore the 3 Series range no longer includes these body styles.\r\n\r\nThe 3 Series is BMW\'s best-selling model, accounting for around 30% of the BMW brand\'s annual total sales (excluding motorbikes).[1] The BMW 3 Series has won numerous awards throughout its history.\r\n\r\nThe M version of the 3 series, M3, debuted with the E30 M3 in 1986.[2]', '2020-09-09 11:24:48'),
-('BMW X5', 'The BMW X5 is a mid-size luxury, rear-wheel drive SUV produced by BMW.\r\n\r\nThe X5 made its debut in 1999. It was BMW\'s first SUV and it also featured all-wheel drive and was available with either manual or automatic transmission. In 2006, the second generation X5 was launched, known internally as the E70. Introduced in the facelift version of the E53, the E70 also featured the torque-split capable xDrive all-wheel drive system mated to an automatic transmission. In 2009, the X5 M performance variant was released as a 2010 model.[1]\r\n\r\nBMW branded the X5 as a Sport Activity Vehicle (SAV) rather than an SUV, to emphasize its on-road ability despite its size. Like the Lexus RX 300, the X5 heralded the shift from light truck-based body-on-frame SUVs to crossovers underpinned by unibody car platforms that would come to fruition in the late 2000s. Among German luxury automakers, while the Mercedes-Benz M-Class had beaten the X5 to the market by a year, the X5 was the first to use a unibody chassis whereas the M-Class used a light truck platform until its second generation. While the Lexus RX is based on the Toyota Camry mass market sedan, the X5 shares its underpinnings with the BMW 5 Series performance luxury sedan.[2][3]\r\n\r\nX5s are manufactured in Greer, South Carolina at the Spartanburg BMW plant and modified for armoured, security versions in Mexico at the BMW de México Toluca plant.[4] Since July 2009, some assembly operations are also performed in Kaliningrad, Russia by Avtotor.\r\n\r\nStarting with the X5, BMW\'s \"SAV\" series has since expanded with derivatives of other BMW number-series models, first in 2003 with the BMW X3 compact luxury crossover, and then in 2008 with the BMW X6 midsize coupe luxury crossover which shares its platform with the X5.', '2020-09-09 11:24:48'),
-('BMW i8', 'The BMW i8 is a plug-in hybrid sports car developed by BMW. The i8 is part of BMW\'s electrified fleet and is marketed under the BMW i sub-brand. The production version of the BMW i8 was unveiled at the 2013 Frankfurt Motor Show, and was released in Germany in June 2014.[10] Deliveries to retail customers in the U.S. began in August 2014.[11] A roadster variant was launched May 2018.[12] Production ended in June 2020.[13]\r\n\r\nThe 2015 BMW i8 accelerates from 0 to 100 km/h (62 mph) in 4.4 seconds[14][15] and has an electronic limited top speed of 250 km/h (155 mph).[5] The 2015 model year i8 has a 7.1 kWh lithium-ion battery pack that delivers an all-electric range of 37 km (23 mi) under the New European Driving Cycle. Under the U.S. EPA cycle, the range in EV mode is 24 km (15 mi).[7] The battery capacity of both, BMW i8 Roadster and the i8 Coupé, was increased to 11.6 kWh in 2018, allowing the NEDC electric range to rise to 55 km (34 mi) for the coupé and to 53 km (33 mi) for the roadster.[16]\r\n\r\nThe BMW i8 coupé has a fuel efficiency of 2.1 L/100 km (134.5 mpg‑imp; 112.0 mpg‑US) under the NEDC test with carbon emissions of 49 g/km. The EPA rated the i8 combined fuel economy at 76 MPGe (3.1 L gasoline equivalent/100 km; 91 mpg-imp gasoline equivalent) and 29 miles per gallon (6.7L/100 km) when running in pure gasoline mode.[7]\r\n\r\nBy March 2020, global sales of all variants reached more than 20,000 units, making the BMW i8 the world\'s top selling plug-in electric sports car, and exceeding sales of all competitors in its segment combined.[16]', '2020-09-09 11:24:48'),
-('Mercedes-Benz C-Class', 'The Mercedes-Benz C-Class is a line of compact executive cars produced by Daimler AG. Introduced in 1993 as a replacement for the 190 (W201) range, the C-Class was the smallest model in the marque\'s line-up until the W168 A-Class arrived in 1997. The C-Class is built at Mercedes-Benz factories in Sindelfingen and Bremen, Germany as well as numerous satellite factories in other countries. The first C-Class (W202) sedan was produced on 1 June 1993 and the first second generation (W203) rolled off the assembly line on 18 July 2000. The C-Class has been available with a 4MATIC (i.e., four-wheel drive) option since 2002. The third generation (W204) was launched in 2007 while the latest generation C-Class (W205) came out in 2014.\r\n\r\nThough initially available as a sedan and a station wagon, the W203 series in 2000 debuted a fastback coupé (SportCoupé) version that, when face-lifted, became the Mercedes-Benz CLC-Class. The CLC-Class remained in production until 2011 when a new W204 C-Class coupé replaced it for the 2012 model year.', '2020-09-09 11:31:58'),
-('Mercedes-Benz A-Class', 'The Mercedes-Benz A-Class is a subcompact executive car (regular subcompact in its first two generations) produced by the German automobile manufacturer Mercedes-Benz. The first generation (W168) was introduced in 1997, the second generation model (W169) appeared in late 2004 and the third generation model (W176) was launched in 2012. The fourth generation model (W177), which was launched in 2018, will mark the first time the A-Class is offered in the United States and Canada.[1] This fourth generation A-Class will also be the first to be offered both as a hatchback (W177) and sedan (V177).[2]\r\n\r\nOriginally produced only as a five-door hatchback in 1997, the second generation W169 introduced a three-door hatchback. In the markets where the A-Class is or has been sold, it has represented the entry level model for Mercedes-Benz. Having grown by 68 cm (27 in) since the original model, the 2012 third generation A-class was longer than the first-generation B-class. And although sometimes referred to by fans as the \'Baby Benz\', Mercedes themselves actually use that moniker for the 1982 Mercedes 190 (W201), their first compact executive car model.[3]', '2020-09-09 11:31:58'),
-('Mercedes-Benz G-Class', 'The Mercedes-Benz G-Class, sometimes called G-Wagen (short for Geländewagen, \"terrain vehicle\"), is a mid-size four-wheel drive luxury SUV manufactured by Magna Steyr (formerly Steyr-Daimler-Puch) in Austria and sold by Mercedes-Benz. In certain markets, it has been sold under the Puch name as Puch G.\r\n\r\nThe G-Wagen is characterised by its boxy styling and body-on-frame construction. It uses three fully locking differentials, one of the few vehicles to have such a feature.\r\n\r\nDespite the introduction of an intended replacement, the unibody SUV Mercedes-Benz GL-Class in 2006, the G-Class is still in production and is one of the longest produced vehicles in Daimler\'s history, with a span of 40 years. Only the Unimog surpasses it.[4]', '2020-09-09 11:31:58'),
-('Mercedes-Benz S-Class', 'The Mercedes-Benz S-Class, formerly known as Sonderklasse (German for \"special class\", abbreviated as \"S-Klasse\"), is a series of full-size luxury sedans, limousines and armored sedans produced by the German automaker Mercedes-Benz, a division of German company Daimler AG. The S-Class is the designation for top-of-the-line Mercedes-Benz models and was officially introduced in 1972 with the W116, and has remained in use ever since. The S-Class is the flagship vehicle for Mercedes-Benz.\r\n\r\nThe S-Class has debuted many of the company\'s latest innovations, including drivetrain technologies, interior features, and safety systems (such as the first seatbelt pretensioners).[5] The S-Class has ranked as the world\'s best-selling luxury sedan.[6] In automotive terms, Sonderklasse refers to \"a specially outfitted car.\" Although used colloquially for decades,[citation needed] following its official application in 1972, six generations of officially named S-Klasse sedans have been produced.\r\n\r\nIn 1981, the two-door, four-seat S-Class, designated as SEC, was introduced, sharing the petrol V8 engines with its four-door version, W126. After the introduction of new nomeculate scheme, SEC was simply renamed as S-Class Coupé. For 1996 model year, the coupé was separated from S-Class line and named as new CL-Class (in line with other two-door models: CLK, SL, and SLK); however, the CL-Class was reintegrated into S-Class model line (same with CLK becoming E-Class Coupé and Cabriolet). The first-ever S-Class convertible since 1972, internally named A217, was introduced and became the one-generation model only. After the end of W222 production in 2020, the successors to the C217 coupé and A217 convertible aren\'t planned, citing the low demand for those models and stronger demand for SUV models.', '2020-09-09 11:31:58');
+INSERT INTO `searchengine` (`Id`, `Name`, `Url`, `Date`) VALUES
+(1, 'Google', 'https://www.google.com', '2020-09-09 22:19:24'),
+(2, 'Facebook', 'https://www.facebook.com', '2020-09-09 22:19:24'),
+(3, 'Google Play Music', 'https://www.play.google.com', '2020-09-09 22:19:24'),
+(4, 'Google Images', 'https://images.google.com/', '2020-09-09 22:19:24'),
+(5, 'Google Store', 'https://store.google.com/', '2020-09-09 22:19:24'),
+(6, 'Chrome Web Store - Apps - Google Chrome', 'https://chrome.google.com/webstore/category/extensions', '2020-09-09 22:19:24'),
+(7, 'Amazon', 'https://www.amazon.com/', '2020-09-09 22:19:24'),
+(8, 'Amazon Prime', 'https://www.primevideo.com/', '2020-09-09 22:19:24'),
+(9, 'Amazon (company) - Wikipedia', 'https://en.wikipedia.org/wiki/Amazon_(company)', '2020-09-09 22:19:24'),
+(10, 'YouTube', 'https://www.youtube.com/', '2020-09-09 22:21:42'),
+(11, 'YouTube (@YouTube) · Twitter', 'https://twitter.com/YouTube', '2020-09-09 22:21:42'),
+(12, 'YouTube - Wikipedia', 'https://en.wikipedia.org/wiki/YouTube', '2020-09-09 22:21:42'),
+(13, 'Twitter', 'https://twitter.com/', '2020-09-09 22:24:15'),
+(14, 'Twitter (@Twitter) · Twitter', 'https://twitter.com/Twitter', '2020-09-09 22:24:15'),
+(15, 'Twitter', 'https://en.wikipedia.org/wiki/Twitter', '2020-09-09 22:24:15'),
+(16, 'Facebook', 'https://en.wikipedia.org/wiki/Facebook', '2020-09-09 22:25:47'),
+(17, 'Founder and CEO of Facebook, Inc.', 'https://en.wikipedia.org/wiki/Mark_Zuckerberg', '2020-09-09 22:25:47');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `searchengine`
+--
+ALTER TABLE `searchengine`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `searchengine`
+--
+ALTER TABLE `searchengine`
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

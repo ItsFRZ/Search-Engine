@@ -1,14 +1,28 @@
 <!doctype html>
 <html>
 	<head>
+		<link rel="stylesheet" href="sheet2.css">
+		<title>PandoraX</title>
 	
 	</head>
 	<body>
+		
+		<div id="container">
+			<div id="plogo">
+				<img src="pandorax.jpg" width="500px" height="200px">
+			</div>
+		</div>
+		
+	
 		<form method="post" action="backend.php"> 
 			
-			<input type="text" name="q" placeholder="Search Anything ...">
-			<br>
-			<input type="submit" value="Search">
+			<div class="sbox" >
+					<input id="sbx" type="text" name="q" placeholder="Search Anything ...">
+			</div>
+				<br>
+			<div class="sbt">
+					<input class="sbut" type="submit" value="Search">
+			</div>
 			
 		</form>
 	</body>

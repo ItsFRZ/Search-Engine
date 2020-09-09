@@ -1,16 +1,48 @@
 .container{
 	
-	box-shadow : 0px 0px 2px inset #2d5873;
-	background : #e6efff;
-	color : #0f1d36;
-	border : 1px solid #dce5f5;
-	width : 80%;
-	height : 250px;
-	margin : 10px auto;
-	font-size : 14px;
-	font-family : Arial;
-	font-weight : bold;
-	text-align : center;
-	padding : 20px 2px;
 	
+	padding :  10px 3%;
+	
+	
+}
+#name{
+	font-size : 19px;
+	color : blue;
+	font-family : Arial;
+}
+#url{
+	font-size : 16px;
+	color : grey;
+	font-family : Arial;
+	
+}
+.st1{
+	border-bottom : 1px solid #d1d1d1;
+	margin : 2px 5px;
+	padding : 4px 10px;
+}
+
+.st{
+	width : 380px;
+	margin : 2px 8px;
+	padding : 3px;
+	font-family : Arial;
+	text-indent : 8px;
+	font-size : 17px;
+	border-radius : 6px;
+	border : 1px solid grey;
+	
+}
+.sb{
+	width : 120px;
+	margin : 2px 8px;
+	padding : 3px;
+	font-family : Arial;
+	font-size : 17px;
+	background : black;
+	color : white;
+	
+	
+	border-radius : 6px;
+	border : 1px solid white;
 }

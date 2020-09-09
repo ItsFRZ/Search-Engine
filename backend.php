@@ -10,7 +10,7 @@
 		
 	}
 	
-	$sql = "SELECT * FROM search WHERE Name Like '$search%'";
+	$sql = "SELECT * FROM searchengine WHERE Name Like '$search%' ";
 	
 	$x = mysqli_query($connect,$sql);
 	
@@ -22,13 +22,19 @@
 		
 				echo "<head>";
 					echo "<link rel='stylesheet' href='sheet1.css'>";
+					echo "<link rel='stylesheet' href='sheet2.css'>";
+					echo "<title>PandoraX</title>";
 				echo "</head>";
 				echo "<body>";
 					
-					echo "<form method='post' action='back2.php>'";
+					echo "<form method='post' action='back2.php'>";
 							echo "<br>";
-							echo "<input type='text' name='ser' placeholder='Search Anything ...'>";
-							echo "<input type='submit' value='Search'>";
+						echo "<div class='st1'>";	
+							echo "<input class='st' type='text' name='ser' placeholder='Search Anything ...'>";
+						
+							echo "<input class='sb' type='submit' value='Search'>";
+						echo "</div>";
+							
 					
 					echo "</form>";
 					
@@ -37,12 +43,9 @@
 					{
 						
 						echo "<div class='container'>";
-							echo " ".$a['Name'];
+							echo "<span id='name'>".$a['Name']."</span>";
 							echo "<br>";
-							echo "<br>";
-							echo "<br>";
-							echo "<br>";
-							echo " ".$a['Descr'];
+							echo "<span id='url'>".$a['Url']."</span>";
 						echo "</div>";
 					}
 	
