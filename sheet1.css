@@ -1,0 +1,16 @@
+.container{
+	
+	box-shadow : 0px 0px 2px inset #2d5873;
+	background : #e6efff;
+	color : #0f1d36;
+	border : 1px solid #dce5f5;
+	width : 80%;
+	height : 250px;
+	margin : 10px auto;
+	font-size : 14px;
+	font-family : Arial;
+	font-weight : bold;
+	text-align : center;
+	padding : 20px 2px;
+	
+}
