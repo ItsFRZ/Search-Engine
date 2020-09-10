@@ -10,6 +10,8 @@
 		
 	}
 	
+	$started = microtime(true);
+	
 	$sql = "SELECT * FROM searchengine WHERE Name Like '$search%' ";
 	
 	$x = mysqli_query($connect,$sql);
@@ -58,6 +60,12 @@
 		echo "Table is empty (Zero Rows) <br>".mysqli_error($connect);
 	}
 	
+	$end = microtime(true);
+	$difference = $end - $started;
+	$querytime = number_format($difference,10);
+	
+	
+	echo "<span class='srct'>Search results in $querytime seconds</span>";
 
 	
 ?>
